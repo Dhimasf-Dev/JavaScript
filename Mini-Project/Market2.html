@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market_2</title>
+    <script dever src="Market2.js"></script>
+    <style>
+        table,td,th {
+            border : 2px solid black;
+            border-collapse : collapse;
+            padding : 10px
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1 style="text-align:center">MARKET</h1>
+
+        <!-- Filter Box -->
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama : <input onchange="filterName()" type="text"></p>
+            <p>Harga : <input onchange="filterName()" type="number" id="min"> - <input onchange="filterName()" type="number" id="max"></p>
+            <p>Category :
+                <select id="fDropdown">
+
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- Input Data -->
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="Nama" id="iName"></td>
+                    <td><input type="number" placeholder="Harga" id="iPrice"></td>
+                    <td>
+                        <select id="iDropdown"></select>
+                    </td>
+                    <td><input type="number" placeholder="Stock" id="iStock"></td>
+                </tr>
+            </table>
+            <p><input type="button" value="Input" id="iButton()"></p>
+        </fieldset>
+
+        <!-- Tabel Data -->
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td>Category</td>
+                    <td>Nama</td>
+                    <td>Price</td>
+                    <td>Stock</td>
+                    <td>Buy</td>
+                    <td colspan="2">Action</td>
+                </tr>
+
+                <tr id="body">
+
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Cart -->
+        <fieldset>
+            <legend>Cart</legend>
+            <table>
+                <tr>
+                    <td>id</td>
+                    <td>Category</td>
+                    <td>Nama</td>
+                    <td>Price</td>
+                    <td>Qty</td>
+                    <td>Action</td>
+                </tr>
+                <tr id="cart">
+
+                </tr>
+            </table>
+            <p><input onclick="fPayment()" type="button" value="Payment"></p>
+        </fieldset>
+
+        <!-- Transaction -->
+        <fieldset>
+            <legend>Payment</legend>
+            <h1>Transaction Detail</h1>
+            <div id="pay">
+
+            </div>
+        </fieldset>
+    </form> 
+</body>
+</html>
